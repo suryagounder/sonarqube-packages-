@@ -1,0 +1,14 @@
+    1 cd /opt
+    2  sudo yum install java-17-amazon-corretto-devel
+    3  sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.1.0.73491.zip
+    4  sonar unzip sonarqube-10.1.0.73491.zip 
+    5  sudo unzip sonarqube-10.1.0.73491.zip 
+    6  sudo mv sonarqube-10.1.0.73491/ sonar10
+    7  sudo chown -R ec2-user:ec2-user sonar10/
+    8  cd 
+   10  /opt/sonar10/bin/linux-x86-64/sonar.sh start
+   11  /opt/sonar10/bin/linux-x86-64/sonar.sh status
+   12  sudo gedit /opt/sonar10/conf/sonar.properties
+   13  /opt/sonar10/bin/linux-x86-64/sonar.sh status
+   14  sudo vi /opt/sonar10/conf/sonar.properties
+   15  /opt/sonar10/bin/linux-x86-64/sonar.sh status
